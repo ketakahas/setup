@@ -1,0 +1,7 @@
+Host test
+ HostName 13.114.30.4
+ User ec2-user
+ Port 22
+ IdentityFile ~/.ssh/ketakahas.pem
+ StrictHostKeyChecking no
+ UserKnownHostsFile /dev/null

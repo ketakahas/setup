@@ -1,0 +1,5 @@
+---
+- hosts: vagrant_develops
+  connection: "{{ CONNECTION_TYPE }}"
+  roles:
+    - dev

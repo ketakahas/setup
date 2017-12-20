@@ -1,0 +1,8 @@
+[vagrant_develops]
+localhost
+
+[aws_develops]
+
+[all_develops:children]
+vagrant_develops
+aws_develops

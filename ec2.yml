@@ -1,0 +1,5 @@
+---
+- hosts: aws_develops
+  connection: "{{ CONNECTION_TYPE }}"
+  roles:
+    - dev

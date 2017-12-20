@@ -1,0 +1,4 @@
+---
+TEST_COMMENT: "aws develops"
+WORK_USER: ec2-user
+CONNECTION_TYPE: ssh
