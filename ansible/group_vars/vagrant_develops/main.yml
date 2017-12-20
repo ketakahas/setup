@@ -1,0 +1,4 @@
+---
+TEST_COMMENT: in group_vars
+WORK_USER: vagrant
+CONNECTION_TYPE: local
