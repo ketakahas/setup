@@ -10,6 +10,14 @@
 - name: git clone pyenv
   git: repo=https://github.com/yyuu/pyenv.git dest=/home/{{ WORK_USER }}/.pyenv
   when: pyenv_present.rc != 0
+- name: update bash_profile for pyenv
+  blockinfile:
+    dest: ~/.bash_profile
+    content: |
+      export PYENV_ROOT="$HOME/.pyenv"
+      export PATH="$PYENV_ROOT/bin:$PATH"
+      eval "$(pyenv init -)"
+      eval "$(pyenv virtualenv-init -)"
 
 - name: check pyenv-virtualenv installed
   command: test -x /home/{{ WORK_USER }}/.pyenv/plugins/pyenv-virtualenv

@@ -14,6 +14,12 @@
 - name: git clone ruby-build
   git: repo=https://github.com/sstephenson/ruby-build.git dest=/home/{{ WORK_USER }}/.rbenv/plugins/ruby-build
   when: rbuild_present.rc != 0
+- name: update bash_profile for rbenv
+  blockinfile:
+    dest: ~/.bash_profile
+    content: |
+      export PATH="$HOME/.rbenv/bin:$PATH"
+      eval "$(rbenv init -)"
 
 - name: update rbenv
   command: git pull --rebase chdir=/home/{{ WORK_USER }}/.rbenv
