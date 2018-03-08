@@ -12,6 +12,7 @@ export RSYNC_RSH=ssh
 # 環境変数 LANG を消去する。日本語メッセージを出してほしくないため。
 unset LANG
 
+export PYTHONIOENCODING=utf-8
 export PYTHONPATH=~/lib/python:.
 # デフォルトのパス
 PATH=~/bin:/usr/local/bin:/usr/X11R6/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
