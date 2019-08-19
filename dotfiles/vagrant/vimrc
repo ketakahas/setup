@@ -5,6 +5,7 @@ filetype indent on
 " set {{{1
 set ignorecase
 set smartcase
+set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -47,6 +48,12 @@ set completeopt+=longest
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd FileType php setl autoindent
+autocmd FileType php setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType php setl tabstop=4 expandtab shiftwidth=4 softtabstop=4
+autocmd FileType html setl autoindent
+autocmd FileType html setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType html setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 if exists('&ambiwidth')
 	set ambiwidth=single
 endif
